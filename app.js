@@ -20,6 +20,9 @@ app.use('/api/usuarios', usuariosRouter);
 // Puerto
 const PORT = 3000;
 
+const logsRouter = require('./routes/logs');
+app.use('/api', logsRouter);
+
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor escuchando en puerto ${PORT}`);

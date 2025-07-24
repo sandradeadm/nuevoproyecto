@@ -273,6 +273,7 @@ router.get('/usuarios-por-rol', async (req, res) => {
   }
 });
 
+
 // Cambiar contraseña (con validación y registro en historial)
 router.put('/:id/cambiar-password', async (req, res) => {
   const { nuevaPassword } = req.body;
@@ -293,5 +294,6 @@ router.put('/:id/cambiar-password', async (req, res) => {
     res.status(500).send('Error cambiando la contraseña');
   }
 });
+
 
 module.exports = router;
